@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Студентське портфоліо</title>
+    <meta name="description" content="Студентське портфоліо: навчання, навички, захоплення та перші проєкти.">
+    <meta property="og:title" content="Студентське портфоліо">
+    <meta property="og:description" content="Навчання, захоплення та перші кроки у веброзробці.">
+    <meta property="og:image" content="https://evhenii.github.io/img/mountains.svg">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти до основного вмісту</a>
+<header class="header" id="top">
+    <div class="header__inner">
+        <label class="theme" for="theme-toggle">
+            <input class="theme__input" id="theme-toggle" type="checkbox">
+            <span class="theme__label">Змінити тему</span>
+            <span class="theme__track" aria-hidden="true"></span>
+        </label>
+    </div>
+</header>
+
+<main class="main" id="main" tabindex="-1">
+    <div class="intro">
+        <p class="intro__eyebrow">Студентське портфоліо</p>
+        <h1>Привіт! Познайомимось.</h1>
+        <p>Тут зібрано навчання, інтереси та плани.</p>
+    </div>
+    <div class="sections">
+        <section class="section section--wide" id="about">
+            <details class="accordion" open>
+                <summary class="accordion__summary"><h2>Про мене</h2></summary>
+                <div class="accordion__body about">
+                    <picture class="about__picture">
+                        <source media="(min-width: 768px)" srcset="img/avatar-wide.svg"> <!-- add photo -->
+                        <img class="about__photo" src="img/avatar.svg" width="320" height="320" loading="lazy"
+                             alt="Умовний аватар; місце для власного портретного фото">
+                    </picture>
+                    <div class="about__text"><h3>Твоє ім’я та прізвище</h3>
+                        <p>Я вивчаю веброзробку та створюю своє перше портфоліо. Мені цікаво, як HTML і CSS перетворюють
+                            ідею на зручну сторінку. Тут я поступово збиратиму свої роботи та спостереження.</p></div>
+                    <aside class="about__contact" aria-label="Короткі контакти"><h3>Будьмо на зв’язку</h3>
+                        <p>Адреса для прикладу:</p><a href="mailto:student@example.com">student@example.com</a>
+                        <p><a href="#contact">Форма зворотного зв’язку</a></p></aside>
+                </div>
+            </details>
+        </section>
+        <section class="section" id="school">
+            <details class="accordion">
+                <summary class="accordion__summary"><h2>Освіта: школа</h2></summary>
+                <div class="accordion__body"><p><strong>Назва школи · роки навчання · місто</strong></p>
+                    <p>Приклад: у школі найбільше подобалися інформатика та математика. Участь у групових завданнях
+                        допомогла навчитися пояснювати свої ідеї.</p></div>
+            </details>
+        </section>
+        <section class="section" id="university">
+            <details class="accordion">
+                <summary class="accordion__summary"><h2>Освіта: університет</h2></summary>
+                <div class="accordion__body"><p>Додай назву університету, спеціальність і курс.</p>
+                    <p>Приклад улюблених дисциплін: основи вебпрограмування, алгоритми та англійська мова.</p>
+                    <div class="table">
+                        <table>
+                            <caption>Приклад навчального розкладу</caption>
+                            <thead>
+                            <tr>
+                                <th scope="col">День</th>
+                                <th scope="col">Дисципліна</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">Понеділок</th>
+                                <td>Основи вебпрограмування</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Середа</th>
+                                <td>Алгоритми</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">П’ятниця</th>
+                                <td>Англійська мова</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </details>
+        </section>
+        <section class="section" id="subjects">
+            <details class="accordion">
+                <summary class="accordion__summary"><h2>Улюблені навчальні предмети</h2></summary>
+                <div class="accordion__body">
+                    <ul>
+                        <li>Інформатика — можна одразу застосовувати нові знання.</li>
+                        <li>Математика — вчить шукати послідовне рішення.</li>
+                        <li>Англійська — допомагає читати документацію.</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+        <section class="section" id="skills">
+            <details class="accordion">
+                <summary class="accordion__summary"><h2>Навички</h2></summary>
+                <div class="accordion__body"><p>Приклад самооцінки; зміни рівні відповідно до свого досвіду.</p>
+                    <ul class="skills">
+                        <li><label for="skill-html">HTML — 60%</label>
+                            <meter id="skill-html" min="0" max="100" value="60">60%</meter>
+                        </li>
+                        <li><label for="skill-css">CSS — 40%</label>
+                            <meter id="skill-css" min="0" max="100" value="40">40%</meter>
+                        </li>
+                        <li><label for="skill-team">Командна робота — 70%</label>
+                            <meter id="skill-team" min="0" max="100" value="70">70%</meter>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+        <section class="section section--wide" id="hobbies">
+            <details class="accordion">
+                <summary class="accordion__summary"><h2>Хобі та захоплення</h2></summary>
+                <div class="accordion__body cards">
+                    <article class="card"><span aria-hidden="true">◎</span>
+                        <h3>Фотографія</h3>
+                        <p>Помічати цікаве світло й деталі під час прогулянок.</p></article>
+                    <article class="card"><span aria-hidden="true">♫</span>
+                        <h3>Музика</h3>
+                        <p>Знаходити нові альбоми для відпочинку та навчання.</p></article>
+                    <article class="card"><span aria-hidden="true">↗</span>
+                        <h3>Прогулянки</h3>
+                        <p>Досліджувати нові маршрути та робити паузи від екрана.</p></article>
+                </div>
+            </details>
+        </section>
+        <section class="section" id="books">
+            <details class="accordion">
+                <summary class="accordion__summary"><h2>Улюблені книги</h2></summary>
+                <div class="accordion__body"><p>Приклади для майбутнього списку; додай власні обкладинки.</p>
+                    <ol>
+                        <li><cite>«Маленький принц»</cite>, Антуан де Сент-Екзюпері — про дружбу й відповідальність.
+                        </li>
+                        <li><cite>«Місто»</cite>, Валер’ян Підмогильний — про амбіції та пошук себе.</li>
+                        <li><cite>«Тигролови»</cite>, Іван Багряний — про сміливість і свободу.</li>
+                        <li><cite>«1984»</cite>, Джордж Орвелл — про цінність незалежної думки.</li>
+                        <li><cite>«Гобіт»</cite>, Дж. Р. Р. Толкін — про подорож і несподівану відвагу.</li>
+                    </ol>
+                </div>
+            </details>
+        </section>
+        <section class="section" id="music">
+            <details class="accordion">
+                <summary class="accordion__summary"><h2>Улюблена музика</h2></summary>
+                <div class="accordion__body">
+                    <ul>
+                        <li>Один в каное — акустична музика для спокійного вечора.</li>
+                        <li>Океан Ельзи — український рок.</li>
+                        <li>Інструментальна музика — фон для навчання.</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+        <section class="section" id="films">
+            <details class="accordion">
+                <summary class="accordion__summary"><h2>Улюблені фільми або серіали</h2></summary>
+                <div class="accordion__body"><p>Приклади оцінок; постери ще потрібно додати.</p>
+                    <ul>
+                        <li>«Інтерстеллар» (
+                            <time datetime="2014">2014</time>
+                            ) — 9/10.
+                        </li>
+                        <li>«Душа» (
+                            <time datetime="2020">2020</time>
+                            ) — 9/10.
+                        </li>
+                        <li>«Марсіянин» (
+                            <time datetime="2015">2015</time>
+                            ) — 8/10.
+                        </li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+        <section class="section" id="sport">
+            <details class="accordion">
+                <summary class="accordion__summary"><h2>Спорт та активності</h2></summary>
+                <div class="accordion__body"><p>Приклад: кілька разів на тиждень виходжу на довгі прогулянки та роблю
+                    ранкову розминку. Мета — зробити рух регулярною частиною дня.</p></div>
+            </details>
+        </section>
+        <section class="section section--wide" id="travel">
+            <details class="accordion">
+                <summary class="accordion__summary"><h2>Подорожі та місця</h2></summary>
+                <div class="accordion__body"><p>Ілюстрації місць, які хочеться відвідати. Згодом тут будуть власні
+                    фото.</p>
+                    <div class="gallery">
+                        <figure class="gallery__item gallery__item--featured"><img src="img/mountains.svg" width="640"
+                                                                                   height="400" loading="lazy"
+                                                                                   alt="Ілюстрація зелених гір під світлим небом">
+                            <figcaption>Карпати — маршрут для майбутньої мандрівки.</figcaption>
+                        </figure>
+                        <figure class="gallery__item"><img src="img/city.svg" width="640" height="400" loading="lazy"
+                                                           alt="Ілюстрація кольорових міських будинків">
+                            <figcaption>Львів — архітектура та повільні прогулянки.</figcaption>
+                        </figure>
+                        <figure class="gallery__item"><img src="img/mountains.svg" width="640" height="400"
+                                                           loading="lazy"
+                                                           alt="Ілюстрація гірського пейзажу для розділу про відпочинок">
+                            <figcaption>Вихідні на природі — час для відпочинку.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </details>
+        </section>
+        <section class="section" id="projects">
+            <details class="accordion">
+                <summary class="accordion__summary"><h2>Проєкти або досягнення</h2></summary>
+                <div class="accordion__body">
+                    <article class="card"><span class="card__badge">У роботі</span>
+                        <h3>Студентське портфоліо</h3>
+                        <p>Перша адаптивна сторінка з розділами, що розгортаються, та двома темами.</p>
+                        <p>Технології: HTML5, CSS3.</p><a href="https://github.com/evhenii/evhenii.github.io">Репозиторій
+                            портфоліо</a></article>
+                </div>
+            </details>
+        </section>
+        <section class="section" id="goals">
+            <details class="accordion">
+                <summary class="accordion__summary"><h2>Цілі на найближчий рік</h2></summary>
+                <div class="accordion__body">
+                    <ul class="skills">
+                        <li><label for="goal-site">Завершити портфоліо — 30%</label>
+                            <progress id="goal-site" max="100" value="30">30%</progress>
+                        </li>
+                        <li><label for="goal-css">Опанувати адаптивні макети — 20%</label>
+                            <progress id="goal-css" max="100" value="20">20%</progress>
+                        </li>
+                        <li><label for="goal-books">Прочитати п’ять книг — 1 із 5</label>
+                            <progress id="goal-books" max="5" value="1">1 із 5</progress>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+        <section class="section" id="facts">
+            <details class="accordion">
+                <summary class="accordion__summary"><h2>Цікаві факти про мене</h2></summary>
+                <div class="accordion__body"><p>Приклади — залиш лише ті, що відповідають тобі:</p>
+                    <ul>
+                        <li>Люблю вчитися на практичних прикладах.</li>
+                        <li>Занотовую ідеї для майбутніх проєктів.</li>
+                        <li>Помічаю незвичні деталі у звичних місцях.</li>
+                        <li>Люблю відкривати нову музику.</li>
+                        <li>Найкраще відпочиваю під час прогулянок.</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+        <section class="section" id="quotes">
+            <details class="accordion">
+                <summary class="accordion__summary"><h2>Улюблені цитати</h2></summary>
+                <div class="accordion__body">
+                    <blockquote><p>«Борітеся — поборете!»</p>
+                        <footer>Тарас Шевченко, <cite>«Кавказ»</cite></footer>
+                    </blockquote>
+                    <blockquote><p>«Ні! Я жива! Я буду вічно жити!»</p>
+                        <footer>Леся Українка, <cite>«Лісова пісня»</cite></footer>
+                    </blockquote>
+                </div>
+            </details>
+        </section>
+        <section class="section section--wide" id="contact">
+            <details class="accordion">
+                <summary class="accordion__summary"><h2>Контакти / зворотний зв’язок</h2></summary>
+                <div class="accordion__body"><p id="form-note">Навчальна форма перевіряє поля у браузері. Повідомлення
+                    не надсилається; після перевірки сторінка перезавантажиться. Для листування заміни адресу у футері
+                    своєю.</p>
+                    <form class="form" action="#contact" method="get" aria-describedby="form-note">
+                        <div class="form__field"><label for="name">Ім’я (обов’язково)</label><input id="name"
+                                                                                                    type="text"
+                                                                                                    autocomplete="name"
+                                                                                                    required
+                                                                                                    minlength="2"
+                                                                                                    maxlength="80"
+                                                                                                    pattern=".*\S.*"
+                                                                                                    title="Введи ім’я, а не лише пробіли.">
+                        </div>
+                        <div class="form__field"><label for="email">Email (обов’язково)</label><input id="email"
+                                                                                                      type="email"
+                                                                                                      autocomplete="email"
+                                                                                                      required></div>
+                        <div class="form__field form__field--wide"><label for="topic">Тема (обов’язково)</label><select
+                                id="topic" required>
+                            <option value="">Обери тему</option>
+                            <option value="study">Навчання</option>
+                            <option value="project">Спільний проєкт</option>
+                            <option value="feedback">Відгук про сайт</option>
+                        </select></div>
+                        <div class="form__field form__field--wide"><label for="message">Повідомлення (мінімум 10
+                            символів)</label><textarea id="message" rows="5" minlength="10" maxlength="2000"
+                                                       required></textarea></div>
+                        <label class="form__consent form__field--wide" for="consent"><input id="consent" type="checkbox"
+                                                                                            required>Погоджуюся на
+                            обробку введених даних для відповіді.</label>
+                        <button class="button" type="submit">Перевірити форму</button>
+                    </form>
+                </div>
+            </details>
+        </section>
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer__navigation">
+        <nav class="nav" aria-label="Основна навігація">
+            <details class="nav__menu">
+                <summary class="nav__toggle">Меню</summary>
+                <div class="nav__links"><a href="#about">Про мене</a><a href="#school">Навчання</a><a href="#hobbies">Захоплення</a><a
+                        href="#projects">Проєкти</a><a href="#contact">Контакти</a></div>
+            </details>
+        </nav>
+    </div>
+    <div class="footer__inner">
+        <div><strong>Контакти</strong>
+            <address><a href="mailto:student@example.com">student@example.com</a> · <a
+                    href="https://github.com/evhenii">GitHub</a></address>
+        </div>
+        <p>© 2026 Твоє ім’я. Усі права захищено.</p><a href="#top">Нагору ↑</a></div>
+</footer>
+</body>
+</html>
