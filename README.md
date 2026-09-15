@@ -2,7 +2,7 @@
 
 Адаптивний вебсайт-портфоліо, створений з дотриманням сучасних стандартів семантичного **HTML5** та чистого **CSS3** (Mobile First, CSS Grid, Flexbox, CSS Custom Properties, без використання сторонніх CSS-фреймворків).
 
-- **Демо-сторінка (GitHub Pages):** [https://evheniikandych.github.io/](https://evheniikandych.github.io/)
+- **Демо-сторінка (GitHub Pages):** [[https://evheniikandych.github.io/](https://evheniikandych.github.io/)](https://evheniikandych.github.io/evhenii.github.io/)
 - **Репозиторій проєкту:** [https://github.com/EvheniiKandych/evhenii.github.io](https://github.com/EvheniiKandych/evhenii.github.io)
 - **Автор:** Євгеній Кандич, студент 3 курсу факультету прикладної математики та інформатики ЛНУ ім. Івана Франка.
 
