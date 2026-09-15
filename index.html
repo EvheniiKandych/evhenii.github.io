@@ -3,18 +3,44 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Студентське портфоліо</title>
-    <meta name="description" content="Студентське портфоліо: навчання, навички, захоплення та перші проєкти.">
-    <meta property="og:title" content="Студентське портфоліо">
-    <meta property="og:description" content="Навчання, захоплення та перші кроки у веброзробці.">
-    <meta property="og:image" content="https://evhenii.github.io/img/mountains.svg">
+    <title>Портфоліо — Євгеній Кандич</title>
+    <meta name="description" content="Студентське портфоліо Євгенія Кандича: навчання в ЛНУ, навички, захоплення, улюблені книги та фільми, подорожі та проєкти.">
+    <meta property="og:title" content="Портфоліо — Євгеній Кандич">
+    <meta property="og:description" content="Студент 3 курсу прикладної математики ЛНУ ім. Івана Франка. Портфоліо, інтереси та проєкти.">
+    <meta property="og:image" content="img/profile.jpg">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div id="stars-container"></div>
 <a class="skip-link" href="#main">Перейти до основного вмісту</a>
-<header class="header" id="top">
+
+<section class="hero" aria-label="Головний банер">
+    <div class="hero__inner">
+        <h1 class="hero__title" id="top">Кандич Євгеній</h1>
+    </div>
+</section>
+
+<header class="header">
     <div class="header__inner">
+        <a class="header__brand" href="#top" aria-label="Повернутися до заголовка">Є. Кандич</a>
+        <nav class="nav" aria-label="Основна навігація">
+            <details class="nav__menu">
+                <summary class="nav__toggle" aria-label="Відкрити меню навігації">☰ Меню</summary>
+                <div class="nav__links">
+                    <a href="#about">Про мене</a>
+                    <a href="#school">Школа</a>
+                    <a href="#university">Освіта</a>
+                    <a href="#skills">Навички</a>
+                    <a href="#hobbies">Хобі</a>
+                    <a href="#books">Книги</a>
+                    <a href="#films">Фільми</a>
+                    <a href="#travel">Подорожі</a>
+                    <a href="#projects">Проєкти</a>
+                    <a href="#contact">Контакти</a>
+                </div>
+            </details>
+        </nav>
         <label class="theme" for="theme-toggle">
             <input class="theme__input" id="theme-toggle" type="checkbox">
             <span class="theme__label">Змінити тему</span>
@@ -24,309 +50,458 @@
 </header>
 
 <main class="main" id="main" tabindex="-1">
-    <div class="intro">
-        <p class="intro__eyebrow">Студентське портфоліо</p>
-        <h1>Привіт! Познайомимось.</h1>
-        <p>Тут зібрано навчання, інтереси та плани.</p>
-    </div>
     <div class="sections">
         <section class="section section--wide" id="about">
             <details class="accordion" open>
                 <summary class="accordion__summary"><h2>Про мене</h2></summary>
                 <div class="accordion__body about">
                     <picture class="about__picture">
-                        <source media="(min-width: 768px)" srcset="img/avatar-wide.svg"> <!-- add photo -->
-                        <img class="about__photo" src="img/avatar.svg" width="320" height="320" loading="lazy"
-                             alt="Умовний аватар; місце для власного портретного фото">
+                        <source media="(min-width: 768px)" srcset="img/profile.jpg">
+                        <img class="about__photo" src="img/profile.jpg" width="320" height="320" loading="lazy"
+                             alt="Фотографія автора сайту Євгенія Кандича">
                     </picture>
-                    <div class="about__text"><h3>Твоє ім’я та прізвище</h3>
-                        <p>Я вивчаю веброзробку та створюю своє перше портфоліо. Мені цікаво, як HTML і CSS перетворюють
-                            ідею на зручну сторінку. Тут я поступово збиратиму свої роботи та спостереження.</p></div>
-                    <aside class="about__contact" aria-label="Короткі контакти"><h3>Будьмо на зв’язку</h3>
-                        <p>Адреса для прикладу:</p><a href="mailto:student@example.com">student@example.com</a>
-                        <p><a href="#contact">Форма зворотного зв’язку</a></p></aside>
+                    <div class="about__text">
+                        <h3>Євгеній Кандич</h3>
+                        <p>Я студент третьокурсник <b>ЛНУ ім. Івана Франка</b> спеціальності «Прикладна Математика». Працюю в сфері <b>комерційної нерухомості</b>. Є учасником ГО «Шквал».</p>
+                    </div>
+                    <aside class="about__contact" aria-label="Короткі контакти">
+                        <h3>Зв'язок 📞</h3>
+                        <a href="mailto:yek.workmail@proton.me">yek.workmail@proton.me</a>
+                        <p><a href="#contact">Форма зв'язку</a></p>
+                    </aside>
                 </div>
             </details>
         </section>
+
         <section class="section" id="school">
             <details class="accordion">
                 <summary class="accordion__summary"><h2>Освіта: школа</h2></summary>
-                <div class="accordion__body"><p><strong>Назва школи · роки навчання · місто</strong></p>
-                    <p>Приклад: у школі найбільше подобалися інформатика та математика. Участь у групових завданнях
-                        допомогла навчитися пояснювати свої ідеї.</p></div>
+                <div class="accordion__body">
+                    <p><strong>КЗШ №72 / КЗО «ГРАНД» ДОР · 2013–2024 · Кривий Ріг</strong></p>
+                    <p>Запам'яталось знайомствами, супроводом по різних етапах дорослішання та й в цілому школа — один з найважливіших періодів життя, адже супроводить нас від раннього дитинства і майже до повноліття.</p>
+                </div>
             </details>
         </section>
+
         <section class="section" id="university">
             <details class="accordion">
                 <summary class="accordion__summary"><h2>Освіта: університет</h2></summary>
-                <div class="accordion__body"><p>Додай назву університету, спеціальність і курс.</p>
-                    <p>Приклад улюблених дисциплін: основи вебпрограмування, алгоритми та англійська мова.</p>
+                <div class="accordion__body">
+                    <p><strong>ЛНУ ім. Івана Франка</strong> · Факультет прикладної математики та інформатики · 3 курс.</p>
                     <div class="table">
                         <table>
-                            <caption>Приклад навчального розкладу</caption>
+                            <caption>Навчальний план та академічні дисципліни</caption>
                             <thead>
-                            <tr>
-                                <th scope="col">День</th>
-                                <th scope="col">Дисципліна</th>
-                            </tr>
+                                <tr>
+                                    <th scope="col">Дисципліна</th>
+                                    <th scope="col">Семестр</th>
+                                    <th scope="col">Тип контролю</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <th scope="row">Понеділок</th>
-                                <td>Основи вебпрограмування</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Середа</th>
-                                <td>Алгоритми</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">П’ятниця</th>
-                                <td>Англійська мова</td>
-                            </tr>
+                                <tr>
+                                    <th scope="row">Вебпрограмування</th>
+                                    <td>5</td>
+                                    <td>Залік</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Математичний аналіз</th>
+                                    <td>1–3</td>
+                                    <td>Іспит</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Чисельні методи та ЧМЛА</th>
+                                    <td>4–5</td>
+                                    <td>Іспит</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Англійська мова за проф. спрямуванням</th>
+                                    <td>1–4</td>
+                                    <td>Залік</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </details>
         </section>
+
         <section class="section" id="subjects">
             <details class="accordion">
                 <summary class="accordion__summary"><h2>Улюблені навчальні предмети</h2></summary>
                 <div class="accordion__body">
+                    <p>Список улюблених дисциплін:</p>
                     <ul>
-                        <li>Інформатика — можна одразу застосовувати нові знання.</li>
-                        <li>Математика — вчить шукати послідовне рішення.</li>
-                        <li>Англійська — допомагає читати документацію.</li>
+                        <li><b>Математичний аналіз</b> — хоча я там і не був надуспішним, все ж пари були веселі.</li>
+                        <li><b>Веб програмування і ЧМЛА</b> — можна козирнути своїм досвідом роботи, якщо мати час на заморочки під час виконання завдань.</li>
+                        <li><b>Англійська мова</b> — не складно було адаптуватись до мови, крім того весело було поспілкуватись.</li>
                     </ul>
                 </div>
             </details>
         </section>
+
         <section class="section" id="skills">
             <details class="accordion">
                 <summary class="accordion__summary"><h2>Навички</h2></summary>
-                <div class="accordion__body"><p>Приклад самооцінки; зміни рівні відповідно до свого досвіду.</p>
+                <div class="accordion__body">
+                    <p>Приклад самооцінки ключових практичних та професійних навичок:</p>
                     <ul class="skills">
-                        <li><label for="skill-html">HTML — 60%</label>
-                            <meter id="skill-html" min="0" max="100" value="60">60%</meter>
+                        <li>
+                            <label for="skill-html">Збірка ПК</label>
+                            <meter id="skill-html" min="0" max="100" value="90">90%</meter>
                         </li>
-                        <li><label for="skill-css">CSS — 40%</label>
-                            <meter id="skill-css" min="0" max="100" value="40">40%</meter>
+                        <li>
+                            <label for="skill-css">Організованість</label>
+                            <meter id="skill-css" min="0" max="100" value="30">30%</meter>
                         </li>
-                        <li><label for="skill-team">Командна робота — 70%</label>
-                            <meter id="skill-team" min="0" max="100" value="70">70%</meter>
+                        <li>
+                            <label for="skill-team">Фінансова грамотність</label>
+                            <meter id="skill-team" min="0" max="100" value="50">50%</meter>
                         </li>
                     </ul>
                 </div>
             </details>
         </section>
+
         <section class="section section--wide" id="hobbies">
             <details class="accordion">
                 <summary class="accordion__summary"><h2>Хобі та захоплення</h2></summary>
                 <div class="accordion__body cards">
-                    <article class="card"><span aria-hidden="true">◎</span>
-                        <h3>Фотографія</h3>
-                        <p>Помічати цікаве світло й деталі під час прогулянок.</p></article>
-                    <article class="card"><span aria-hidden="true">♫</span>
-                        <h3>Музика</h3>
-                        <p>Знаходити нові альбоми для відпочинку та навчання.</p></article>
-                    <article class="card"><span aria-hidden="true">↗</span>
-                        <h3>Прогулянки</h3>
-                        <p>Досліджувати нові маршрути та робити паузи від екрана.</p></article>
+                    <article class="card">
+                        <span aria-hidden="true">🎯</span>
+                        <h3>Стрільба і Бушкрафт</h3>
+                        <p>Змалечку мене вчили влучно стріляти по мішеням, це захоплення також привело мене до страйкболу та виживанню в диких умовах.</p>
+                    </article>
+                    <article class="card">
+                        <span aria-hidden="true">💻</span>
+                        <h3>PC та оптимізація систем</h3>
+                        <p>Захоплення комп'ютерними іграми і обмежений бюджет змусили мене навчитись розбиратись в тому, як отримати найбільшу ціну/якість при збірці ПК.</p>
+                    </article>
+                    <article class="card">
+                        <span aria-hidden="true">🧗</span>
+                        <h3>Urbex</h3>
+                        <p>Urban exploration* — дослідження закинутих будівель, бомбосховищ, підземних комунікацій тощо.</p>
+                    </article>
                 </div>
             </details>
         </section>
-        <section class="section" id="books">
+
+        <section class="section section--wide" id="books">
             <details class="accordion">
                 <summary class="accordion__summary"><h2>Улюблені книги</h2></summary>
-                <div class="accordion__body"><p>Приклади для майбутнього списку; додай власні обкладинки.</p>
-                    <ol>
-                        <li><cite>«Маленький принц»</cite>, Антуан де Сент-Екзюпері — про дружбу й відповідальність.
+                <div class="accordion__body">
+                    <ol class="media-grid">
+                        <li class="media-card">
+                            <img src="img/book-metro.jpg" width="400" height="250" loading="lazy" alt="Обкладинка книги Метро 2033">
+                            <div class="media-card__content">
+                                <cite class="media-card__title">«Метро 2033 / 2034 / 2035»</cite>
+                                <span class="media-card__meta">Автор: Дмитро Глуховський</span>
+                                <p class="media-card__desc">Подобається як передали атмосферу безвиході в людей після катастрофи.</p>
+                            </div>
                         </li>
-                        <li><cite>«Місто»</cite>, Валер’ян Підмогильний — про амбіції та пошук себе.</li>
-                        <li><cite>«Тигролови»</cite>, Іван Багряний — про сміливість і свободу.</li>
-                        <li><cite>«1984»</cite>, Джордж Орвелл — про цінність незалежної думки.</li>
-                        <li><cite>«Гобіт»</cite>, Дж. Р. Р. Толкін — про подорож і несподівану відвагу.</li>
+                        <li class="media-card">
+                            <img src="img/book-sherlock.jpg" width="400" height="250" loading="lazy" alt="Обкладинка книги Шерлок Холмс">
+                            <div class="media-card__content">
+                                <cite class="media-card__title">«Шерлок Холмс»</cite>
+                                <span class="media-card__meta">Автор: Сер Артур Конан Дойл</span>
+                                <p class="media-card__desc">Англійська елегантність поєднана з гострим розумом - ідеальне комбо.</p>
+                            </div>
+                        </li>
+                        <li class="media-card">
+                            <img src="img/book-animal-farm.jpg" width="400" height="250" loading="lazy" alt="Обкладинка книги Колгосп Тварин">
+                            <div class="media-card__content">
+                                <cite class="media-card__title">«Колгосп Тварин»</cite>
+                                <span class="media-card__meta">Автор: Джордж Орвелл</span>
+                                <p class="media-card__desc">Цікаво провести аналогії з життям.</p>
+                            </div>
+                        </li>
+                        <li class="media-card">
+                            <img src="img/book-sniper.jpg" width="400" height="250" loading="lazy" alt="Обкладинка книги Американський Снайпер">
+                            <div class="media-card__content">
+                                <cite class="media-card__title">«Американський Снайпер»</cite>
+                                <span class="media-card__meta">Автор: Кріс Кайл</span>
+                                <p class="media-card__desc">Вбив 255 (160 підтверджених офіційно) ворогів, один з найрезультативніших снайперів сучасності.</p>
+                            </div>
+                        </li>
+                        <li class="media-card">
+                            <img src="img/book-history.jpg" width="400" height="250" loading="lazy" alt="Обкладинка книги Майн Кампф">
+                            <div class="media-card__content">
+                                <cite class="media-card__title">«Майн Кампф»</cite>
+                                <span class="media-card__meta">Автор: Адольф Гітлер</span>
+                                <p class="media-card__desc">Нацистська ідеологія є ворожою для України ©Іван «Юнкер» Галенко, командир в АЗОВі. Ворогів треба знати в лице; також для аналізу варто вивчати «Капітал» Маркса.</p>
+                            </div>
+                        </li>
                     </ol>
                 </div>
             </details>
         </section>
+
+        <section class="section section--wide" id="films">
+            <details class="accordion">
+                <summary class="accordion__summary"><h2>Улюблені фільми та серіали</h2></summary>
+                <div class="accordion__body">
+                    <ol class="media-grid">
+                        <li class="media-card">
+                            <img src="img/film-highcastle.jpg" width="400" height="250" loading="lazy" alt="Постер серіалу Людина у високому замку">
+                            <div class="media-card__content">
+                                <cite class="media-card__title">«Людина у високому замку»</cite>
+                                <span class="media-card__meta">Автор / Режисер: Френк Спотніц (за романом Філіпа К. Діка) · Оцінка: 8.0/10</span>
+                                <p class="media-card__desc">Серіал про альтернативну реальність, у якій країни Осі перемогли в Другій світовій війні, проте все одно не зруйнувались під своєю вагою.</p>
+                            </div>
+                        </li>
+                        <li class="media-card">
+                            <img src="img/film-boys.jpg" width="400" height="250" loading="lazy" alt="Постер серіалу The Boys">
+                            <div class="media-card__content">
+                                <cite class="media-card__title">«The Boys»</cite>
+                                <span class="media-card__meta">Автор / Шоуранер: Ерік Кріпке · Оцінка: 8.7/10</span>
+                                <p class="media-card__desc">Спочатку це була класна супергеройська сатира на сучасну повістку і супергероїку, але останній сезон скотився до висміювання Трампа.</p>
+                            </div>
+                        </li>
+                        <li class="media-card">
+                            <img src="img/film-dexter.jpg" width="400" height="250" loading="lazy" alt="Постер серіалу Dexter">
+                            <div class="media-card__content">
+                                <cite class="media-card__title">«Dexter»</cite>
+                                <span class="media-card__meta">Автор / Шоуранер: Джеймс Манос мол. · Оцінка: 8.6/10</span>
+                                <p class="media-card__desc">Кому не подобається дивитись на розсудливих вбивць? Щоправда, хоч цей серіал і вважають легендою, насправді в Декстера удачі більше, ніж розуму.</p>
+                            </div>
+                        </li>
+                        <li class="media-card">
+                            <img src="img/film-breakingbad.jpg" width="400" height="250" loading="lazy" alt="Постер серіалу Breaking Bad">
+                            <div class="media-card__content">
+                                <cite class="media-card__title">«Breaking Bad»</cite>
+                                <span class="media-card__meta">Автор / Творець: Вінс Ґілліґан · Оцінка: 9.5/10</span>
+                                <p class="media-card__desc">Легендарний серіал про кримінал з наркотиками, рідна тема для жителя Кривого Рогу.</p>
+                            </div>
+                        </li>
+                        <li class="media-card">
+                            <img src="img/film-roadside.jpg" width="400" height="250" loading="lazy" alt="Постер фільму Сталкер">
+                            <div class="media-card__content">
+                                <cite class="media-card__title">«Пікнік на узбіччі / Сталкер»</cite>
+                                <span class="media-card__meta">Автор / Режисер: Брати Стругацькі / Андрій Тарковський · Оцінка: 8.1/10</span>
+                                <p class="media-card__desc">Кіно для рефлексії і спокою, де немає жодного екшону - лише атмосфера і їжа для роздумів.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </details>
+        </section>
+
         <section class="section" id="music">
             <details class="accordion">
                 <summary class="accordion__summary"><h2>Улюблена музика</h2></summary>
                 <div class="accordion__body">
                     <ul>
-                        <li>Один в каное — акустична музика для спокійного вечора.</li>
-                        <li>Океан Ельзи — український рок.</li>
-                        <li>Інструментальна музика — фон для навчання.</li>
-                    </ul>
-                </div>
-            </details>
-        </section>
-        <section class="section" id="films">
-            <details class="accordion">
-                <summary class="accordion__summary"><h2>Улюблені фільми або серіали</h2></summary>
-                <div class="accordion__body"><p>Приклади оцінок; постери ще потрібно додати.</p>
-                    <ul>
-                        <li>«Інтерстеллар» (
-                            <time datetime="2014">2014</time>
-                            ) — 9/10.
+                        <li>
+                            <strong>MEMORIZING</strong> — спокійна електронна музика, може витягти будь-який паскудний вокал.
+                            <br>
+                            <iframe data-testid="embed-iframe" style="border-radius:12px; margin-top: .5rem;"
+                                    src="https://open.spotify.com/embed/track/0wBEhigJC6Zts0uwTQbFJh?utm_source=generator&si=98b1abbfd51f49bb"
+                                    width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         </li>
-                        <li>«Душа» (
-                            <time datetime="2020">2020</time>
-                            ) — 9/10.
+                        <li>
+                            <strong>Scars</strong> — саме те, аби їхати повз завод по вечірньому Кривому Розі.
+                            <br>
+                            <iframe data-testid="embed-iframe" style="border-radius:12px; margin-top: .5rem;"
+                                    src="https://open.spotify.com/embed/track/1B9z2pl1roUzfSBaLQWX82?utm_source=generator&si=f63227ac7c164a31"
+                                    width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         </li>
-                        <li>«Марсіянин» (
-                            <time datetime="2015">2015</time>
-                            ) — 8/10.
+                        <li>
+                            <strong>take it from the starz</strong> — в автомобільних аудіосистемах найкраще розкриваються баси з цієї пісні.
+                            <br>
+                            <iframe data-testid="embed-iframe" style="border-radius:12px; margin-top: .5rem;"
+                                    src="https://open.spotify.com/embed/track/5BTZSG989vO5PR8El2kMqW?utm_source=generator&si=cb6a64b5152d4c16"
+                                    width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         </li>
                     </ul>
                 </div>
             </details>
         </section>
+
         <section class="section" id="sport">
             <details class="accordion">
                 <summary class="accordion__summary"><h2>Спорт та активності</h2></summary>
-                <div class="accordion__body"><p>Приклад: кілька разів на тиждень виходжу на довгі прогулянки та роблю
-                    ранкову розминку. Мета — зробити рух регулярною частиною дня.</p></div>
+                <div class="accordion__body">
+                    <p>Кожен день я роблю комплекс вправ на грудну клітину (ЛФК), ці вправи також розкачують груди, спину та біцепс/трицепс.</p>
+                    <p>Крім того для балансу я займаюсь ногами, пресом, найширшими та плечима — останні два м'язи слугують для підкреслення результатів ЛФК. Спорт також позитивно впливає на розумову діяльність, тому я підтримую форму регулярно.</p>
+                </div>
             </details>
         </section>
+
         <section class="section section--wide" id="travel">
             <details class="accordion">
                 <summary class="accordion__summary"><h2>Подорожі та місця</h2></summary>
-                <div class="accordion__body"><p>Ілюстрації місць, які хочеться відвідати. Згодом тут будуть власні
-                    фото.</p>
+                <div class="accordion__body">
                     <div class="gallery">
-                        <figure class="gallery__item gallery__item--featured"><img src="img/mountains.svg" width="640"
-                                                                                   height="400" loading="lazy"
-                                                                                   alt="Ілюстрація зелених гір під світлим небом">
-                            <figcaption>Карпати — маршрут для майбутньої мандрівки.</figcaption>
+                        <figure class="gallery__item">
+                            <img src="img/travel-london.jpg" width="800" height="500" loading="lazy" alt="Панорама Лондона">
+                            <figcaption><strong>Лондон</strong> — дуже подобається англійська атмосфера та культура, як тільки з'явиться можливість обов'язково вирушу туди.</figcaption>
                         </figure>
-                        <figure class="gallery__item"><img src="img/city.svg" width="640" height="400" loading="lazy"
-                                                           alt="Ілюстрація кольорових міських будинків">
-                            <figcaption>Львів — архітектура та повільні прогулянки.</figcaption>
+                        <figure class="gallery__item">
+                            <img src="img/travel-kyiv.jpg" width="800" height="500" loading="lazy" alt="Панорама Києва">
+                            <figcaption><strong>Київ</strong> - на диво, але я ніколи не був в столиці довше одного дня, хочу це виправити.</figcaption>
                         </figure>
-                        <figure class="gallery__item"><img src="img/mountains.svg" width="640" height="400"
-                                                           loading="lazy"
-                                                           alt="Ілюстрація гірського пейзажу для розділу про відпочинок">
-                            <figcaption>Вихідні на природі — час для відпочинку.</figcaption>
+                        <figure class="gallery__item">
+                            <img src="img/travel-usa.jpg" width="800" height="500" loading="lazy" alt="Міст Golden Gate у США">
+                            <figcaption><strong>США</strong> - цікаво як живе країна, побудована виключно ініціативними й двіжовими людьми.</figcaption>
                         </figure>
                     </div>
                 </div>
             </details>
         </section>
-        <section class="section" id="projects">
+
+        <section class="section section--wide" id="projects">
             <details class="accordion">
-                <summary class="accordion__summary"><h2>Проєкти або досягнення</h2></summary>
+                <summary class="accordion__summary"><h2>Проєкти та досягнення</h2></summary>
                 <div class="accordion__body">
-                    <article class="card"><span class="card__badge">У роботі</span>
-                        <h3>Студентське портфоліо</h3>
-                        <p>Перша адаптивна сторінка з розділами, що розгортаються, та двома темами.</p>
-                        <p>Технології: HTML5, CSS3.</p><a href="https://github.com/evhenii/evhenii.github.io">Репозиторій
-                            портфоліо</a></article>
+                    <div class="cards">
+                        <article class="card">
+                            <span class="card__badge">Завершено</span>
+                            <h3>Крафторія</h3>
+                            <p>Перша комерційна сторінка, створена з моєю участю.</p>
+                            <p>Технології: HTML, CSS, JavaScript (Vanilla), SASS, TypeScript.</p>
+                            <a href="https://craftoriya.com/" target="_blank" rel="noopener noreferrer">Сайт проєкту (репозиторій приватний)</a>
+                        </article>
+                        <article class="card">
+                            <span class="card__badge">В процесі</span>
+                            <h3>Сайт за макетом</h3>
+                            <p>Спроба створити повністю ШІ продукт заради експерименту. Деякі речі доопрацьовуються.</p>
+                            <p>Технології: Gemini AI, HTML/CSS.</p>
+                            <a href="https://github.com/EvheniiKandych/meditation_course" target="_blank" rel="noopener noreferrer">Репозиторій проєкту</a>
+                        </article>
+                        <article class="card">
+                            <span class="card__badge">Особисте</span>
+                            <h3>Дрібниці та досвід</h3>
+                            <p>Найбільша досягнута мною швидкість — 117 км/год. В колі знайомств маю співзасновника SoftServe Тараса Кицмея (також співвласник Lem Station).</p>
+                            <img class="card__media" src="img/speed-record.jpg" width="400" height="220" loading="lazy" alt="Спідометр авто із зафіксованою швидкістю">
+                        </article>
+                    </div>
                 </div>
             </details>
         </section>
+
         <section class="section" id="goals">
             <details class="accordion">
                 <summary class="accordion__summary"><h2>Цілі на найближчий рік</h2></summary>
                 <div class="accordion__body">
                     <ul class="skills">
-                        <li><label for="goal-site">Завершити портфоліо — 30%</label>
-                            <progress id="goal-site" max="100" value="30">30%</progress>
+                        <li>
+                            <label for="goal-weight">Вийти на м'язову вагу 75+ кг (після відновлення форми):</label>
+                            <progress id="goal-weight" max="100" value="30">30%</progress>
                         </li>
-                        <li><label for="goal-css">Опанувати адаптивні макети — 20%</label>
-                            <progress id="goal-css" max="100" value="20">20%</progress>
+                        <li>
+                            <label for="goal-income">Отримати стабільний заробіток і накопичити на авто:</label>
+                            <progress id="goal-income" max="100" value="40">40%</progress>
                         </li>
-                        <li><label for="goal-books">Прочитати п’ять книг — 1 із 5</label>
-                            <progress id="goal-books" max="5" value="1">1 із 5</progress>
+                        <li>
+                            <label for="goal-social">Розширити коло спілкування до 5 надійних друзів:</label>
+                            <progress id="goal-social" max="5" value="2">2 із 5</progress>
                         </li>
                     </ul>
                 </div>
             </details>
         </section>
+
         <section class="section" id="facts">
             <details class="accordion">
                 <summary class="accordion__summary"><h2>Цікаві факти про мене</h2></summary>
-                <div class="accordion__body"><p>Приклади — залиш лише ті, що відповідають тобі:</p>
+                <div class="accordion__body">
                     <ul>
-                        <li>Люблю вчитися на практичних прикладах.</li>
-                        <li>Занотовую ідеї для майбутніх проєктів.</li>
-                        <li>Помічаю незвичні деталі у звичних місцях.</li>
-                        <li>Люблю відкривати нову музику.</li>
-                        <li>Найкраще відпочиваю під час прогулянок.</li>
+                        <li>Я можу попасти в монету 10 копійок на відстані 15 м з гвинтівки.</li>
+                        <li>Маю повну колекцію усіх розмірів та видів сталкерських енергетиків Non-Stop.</li>
+                        <li>Вперше почав працювати у 14 років, з тих пір майже весь час поєднував роботу з навчанням, а першу не розумову роботу отримав у 19 років.</li>
+                        <li>За все життя жодного разу не пробував курити.</li>
+                        <li>Родина входить у топ 15% України за доходами, маю чіткий інтерес до фінансової грамотності.</li>
                     </ul>
                 </div>
             </details>
         </section>
-        <section class="section" id="quotes">
+
+        <section class="section section--wide" id="quotes">
             <details class="accordion">
                 <summary class="accordion__summary"><h2>Улюблені цитати</h2></summary>
                 <div class="accordion__body">
-                    <blockquote><p>«Борітеся — поборете!»</p>
-                        <footer>Тарас Шевченко, <cite>«Кавказ»</cite></footer>
+                    <blockquote>
+                        <p>«Лише втративши все до кінця, ми стаємо вільними»</p>
+                        <footer>Тайлер Дерден з книги <cite>«Бійцівський клуб»</cite></footer>
                     </blockquote>
-                    <blockquote><p>«Ні! Я жива! Я буду вічно жити!»</p>
-                        <footer>Леся Українка, <cite>«Лісова пісня»</cite></footer>
+                    <blockquote>
+                        <p>«Багато хочеш — багато буде»</p>
+                        <footer>Особисте життєве кредо</footer>
                     </blockquote>
                 </div>
             </details>
         </section>
+
         <section class="section section--wide" id="contact">
             <details class="accordion">
                 <summary class="accordion__summary"><h2>Контакти / зворотний зв’язок</h2></summary>
-                <div class="accordion__body"><p id="form-note">Навчальна форма перевіряє поля у браузері. Повідомлення
-                    не надсилається; після перевірки сторінка перезавантажиться. Для листування заміни адресу у футері
-                    своєю.</p>
+                <div class="accordion__body">
+                    <p id="form-note">Навчальна форма перевіряє заповнення полів засобами браузера (HTML5 Form Validation). Для прямого зв'язку використовуйте вказану електронну адресу.</p>
                     <form class="form" action="#contact" method="get" aria-describedby="form-note">
-                        <div class="form__field"><label for="name">Ім’я (обов’язково)</label><input id="name"
-                                                                                                    type="text"
-                                                                                                    autocomplete="name"
-                                                                                                    required
-                                                                                                    minlength="2"
-                                                                                                    maxlength="80"
-                                                                                                    pattern=".*\S.*"
-                                                                                                    title="Введи ім’я, а не лише пробіли.">
+                        <div class="form__field">
+                            <label for="name">Ім’я (обов’язково)</label>
+                            <input id="name" type="text" autocomplete="name" required minlength="2" maxlength="80" pattern=".*\S.*" title="Введи ім’я, а не лише пробіли.">
                         </div>
-                        <div class="form__field"><label for="email">Email (обов’язково)</label><input id="email"
-                                                                                                      type="email"
-                                                                                                      autocomplete="email"
-                                                                                                      required></div>
-                        <div class="form__field form__field--wide"><label for="topic">Тема (обов’язково)</label><select
-                                id="topic" required>
-                            <option value="">Обери тему</option>
-                            <option value="study">Навчання</option>
-                            <option value="project">Спільний проєкт</option>
-                            <option value="feedback">Відгук про сайт</option>
-                        </select></div>
-                        <div class="form__field form__field--wide"><label for="message">Повідомлення (мінімум 10
-                            символів)</label><textarea id="message" rows="5" minlength="10" maxlength="2000"
-                                                       required></textarea></div>
-                        <label class="form__consent form__field--wide" for="consent"><input id="consent" type="checkbox"
-                                                                                            required>Погоджуюся на
-                            обробку введених даних для відповіді.</label>
-                        <button class="button" type="submit">Перевірити форму</button>
+                        <div class="form__field">
+                            <label for="email">Email (обов’язково)</label>
+                            <input id="email" type="email" autocomplete="email" required>
+                        </div>
+                        <div class="form__field form__field--wide">
+                            <label for="topic">Тема повідомлення (обов’язково)</label>
+                            <select id="topic" required>
+                                <option value="">Оберіть тему звернення</option>
+                                <option value="study">Навчання / Академічні питання</option>
+                                <option value="project">Спільний проєкт / Співпраця</option>
+                                <option value="feedback">Відгук про сайт</option>
+                            </select>
+                        </div>
+                        <div class="form__field form__field--wide">
+                            <label for="message">Повідомлення (мінімум 10 символів)</label>
+                            <textarea id="message" rows="5" minlength="10" maxlength="2000" required></textarea>
+                        </div>
+                        <label class="form__consent form__field--wide" for="consent">
+                            <input id="consent" type="checkbox" required>
+                            <span>Погоджуюся на обробку введених даних для навчальних цілей.</span>
+                        </label>
+                        <button class="button" type="submit">Перевірити та надіслати</button>
                     </form>
                 </div>
             </details>
         </section>
     </div>
 </main>
+
 <footer class="footer">
-    <div class="footer__navigation">
-        <nav class="nav" aria-label="Основна навігація">
-            <details class="nav__menu">
-                <summary class="nav__toggle">Меню</summary>
-                <div class="nav__links"><a href="#about">Про мене</a><a href="#school">Навчання</a><a href="#hobbies">Захоплення</a><a
-                        href="#projects">Проєкти</a><a href="#contact">Контакти</a></div>
-            </details>
-        </nav>
-    </div>
     <div class="footer__inner">
-        <div><strong>Контакти</strong>
-            <address><a href="mailto:student@example.com">student@example.com</a> · <a
-                    href="https://github.com/evhenii">GitHub</a></address>
+        <div>
+            <strong>Контакти автора</strong>
+            <address>
+                <a href="mailto:yek.workmail@proton.me">yek.workmail@proton.me</a> ·
+                <a href="https://github.com/EvheniiKandych" target="_blank" rel="noopener noreferrer">GitHub Профіль</a>
+            </address>
         </div>
-        <p>© 2026 Твоє ім’я. Усі права захищено.</p><a href="#top">Нагору ↑</a></div>
+        <p>© 2026 Євгеній Кандич. Усі права захищено.</p>
+        <a href="#top">Нагору ↑</a>
+    </div>
 </footer>
+
+<script>
+    // Twinkling stars background animation
+    function createStars() {
+        const container = document.getElementById('stars-container');
+        if (!container) return;
+        const starCount = 60;
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.animationDuration = `${2 + Math.random() * 3}s`;
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            container.appendChild(star);
+        }
+    }
+    createStars();
+</script>
 </body>
 </html>
